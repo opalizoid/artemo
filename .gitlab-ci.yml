@@ -1,0 +1,17 @@
+image: ruby:2.3.1
+
+before_script:
+  - apt-get update >/dev/null
+  - apt-get install -y locales >/dev/null
+  - echo "en_US.UTF-8 UTF-8" > /etc/locale.gen
+  - locale-gen en_US.UTF-8
+  - export LANG=en_US.UTF-8
+  - export LANGUAGE=en_US:en
+  - export LC_ALL=en_US.UTF-8
+
+master:
+  script:
+    - gem build artemo.gemspec
+    - gem install artemo-*
+    - echo "Wherefore, O judges, be of good cheer about death, and know of a certainty, that no evil can happen to a good man, either in life or after death. He and his are not neglected by the gods; nor has my own approaching end happened by mere chance. But I see clearly that the time had arrived when it was better for me to die and be released from trouble; wherefore the oracle gave no sign. For which reason, also, I am not angry with my condemners, or with my accusers; they have done me no harm, although they did not mean to do me any good; and for this I may gently blame them." > test.txt
+    - artemo test.txt

@@ -1,0 +1,62 @@
+Version 1.0
+Prototype of program
+
+Version 2.x.x
+Tests of program
+
+Version 3.0.0
+Rewritten, simpler and working.
+
+Version 3.0.1
+Changed names of methods, add half of rspec tests, add Rakefile and Gemfile.
+
+Version 3.0.2
+Add `rake file['']` to use on custom texts.
+
+Version 3.0.3
+All rspec tests are write.
+
+Version 3.0.4
+All documentation is write, add bin/artemo file and checked code by RuboCop, some methods change names.
+
+Version 3.0.5
+Gem is ready.
+
+Version 3.0.6
+Gem homepage.
+
+Version 3.0.7
+Small changes in display results.
+
+Version 3.0.8
+Better gem description. 
+
+Version 3.0.9
+More rspec tests.
+
+Version 3.1.0
+Add exception support when file is empty or have not enough keywords to analysis.
+
+Version 3.1.1
+Last small fixes.
+
+Version 3.1.2
+Marshal binary database for faster work. 
+
+Version 3.1.3
+Full documentation is added. Faster comparing word with keyword.
+
+Version 3.1.4
+Add plotting library. 
+
+Version 3.1.5
+Better scaling mathod. 
+
+Version 3.1.6
+Add exception support for plotting library, and examples.
+
+Version 3.1.7
+Changes in scaling. 
+
+Version 3.2.0
+Freeze changes, all project is complete. 
