@@ -5,26 +5,31 @@ class Result < Common
   # @note This method initializes all class
 
   def self.call(array_one)
-    scaled = scale(array_one)
-    finish(scaled)
+    finish(array_one)
   end
 
   # @note This method is showing results.
   
   private
   def self.finish(array_one)
-    results = {}
+    results = { }
+    results_to_show = { }
     array_one.each_index do |index|
       results[titles[index]] = array_one[index]
     end
-    results.delete_if{|_k, v| v == 0}
-    results.sort_by { |_k, v| v }.to_h
+    results = results.sort_by { |_k, v| v }.to_h
+    show_k = results.keys.last(10)
+    show_v = results.values.last(10)
+    10.times do |t|
+      results_to_show[show_k[t]] = show_v[t]
+    end
+    results_to_show
   end
 
   # @note This method is storing titles of emotions in Array.
 
   private
   def self.titles
-    ['love', 'guilt', 'delight', 'submission', 'curiosity', 'sentimentality', 'awe', 'despair', 'shame', 'disappointment', 'revulsion', 'outrage', 'remorse', 'envy', 'pessimism', 'contempt', 'cynicism', 'morbidness', 'aggressiveness', 'pride', 'dominance', 'optimism', 'fatalism', 'anxiety']
+    ['love', 'remorse', 'guilt', 'envy', 'delight', 'pessimism', 'submission', 'contempt', 'curiosity', 'cynicism', 'sentimentality', 'morbidness', 'awe', 'aggression', 'despair', 'pride', 'shame', 'dominance', 'disappointment', 'optimism', 'unbelief', 'hope', 'outrage', 'anxiety']
   end
 end

@@ -11,6 +11,7 @@ class Plot
         data = {views: hash}
         chart data, legend: false, label: true, format: :percentage 
       end
+      puts "#{name}.pdf"
     rescue
       nil
     end

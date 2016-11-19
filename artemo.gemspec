@@ -18,7 +18,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '>= 2.3.1'
   
   s.files       = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {spec}/*`.split("\n")
   s.executable = 'artemo'
   s.require_path = ['lib']
   
